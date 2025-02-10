@@ -10,7 +10,7 @@ function fetchFormats() {
 
     statusElement.innerText = "Fetching available formats...";
     
-    fetch("http://localhost:5000/formats", {
+    fetch("https://youtube-downloader-1-apnw.onrender.com/formats", {  // ✅ Updated URL
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: videoURL })
@@ -54,7 +54,7 @@ function downloadVideo() {
 
     statusElement.innerText = "Downloading video, please wait...";
 
-    fetch("http://localhost:5000/download", {
+    fetch("https://youtube-downloader-1-apnw.onrender.com/download", {  // ✅ Updated URL
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: videoURL, format_id: formatID })
