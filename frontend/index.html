@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader & Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>YouTube Video Downloader</h2>
+        
+        <!-- Input for YouTube Video URL -->
+        <input type="text" id="videoURL" placeholder="Enter YouTube URL">
+        <button onclick="fetchFormats()">Get Available Formats</button>
+
+        <!-- MP4 Download Section -->
+        <div id="qualitySelection" style="display: none;">
+            <h3>Download as MP4</h3>
+            <label for="quality">Select Quality:</label>
+            <select id="quality"></select>
+            <button onclick="downloadVideo()">Download MP4</button>
+        </div>
+
+        <!-- MP3 Download Section -->
+        <div id="convertMP3Section" style="display: none;">
+            <h3>Convert & Download as MP3</h3>
+            <button onclick="convertToMP3()">Download MP3</button>
+        </div>
+
+        <!-- Status Message -->
+        <p id="status"></p>
+        
+        <!-- Congratulations Message -->
+        <div id="congratulations" style="display: none;">
+            🎉 Congratulations! Your file has been downloaded! 🎉
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
